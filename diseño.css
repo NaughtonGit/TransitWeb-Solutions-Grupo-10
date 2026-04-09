@@ -46,6 +46,8 @@ nav a:hover {
 
 main {
     padding: 30px 20px;
+    height: 358px;
+    
 }
 
 .contenido {
@@ -94,5 +96,7 @@ footer {
     text-align: center;
     padding: 20px;
     border-top: 4px solid #b8dff2;
-    margin-top: 30px;
+    margin-top: auto;
+    
+    
 }
