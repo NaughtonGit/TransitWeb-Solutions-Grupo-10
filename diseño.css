@@ -80,10 +80,15 @@ main {
 }
 
 footer {
-    background-color: #ffffff;
+    background-image: url(Footer.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
     color: #555;
     text-align: center;
-    padding: 20px;
+    padding: 80px 20px;
+    position: relative;
     border-top: 4px solid #415A77;
     margin-top: auto;
 }
