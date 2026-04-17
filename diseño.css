@@ -80,7 +80,7 @@ main {
 }
 
 footer {
-    background-image: url(Footer.png);
+    background-image: url(footer.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
