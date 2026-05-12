@@ -11,7 +11,7 @@ body {
     line-height: 1.6;
 }
 
-/* HEADER */
+
 header {
     background-color: #ffffff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
@@ -41,7 +41,7 @@ header h1 {
     margin: 0;
 }
 
-/* NAVEGACIÓN */
+
 nav {
     max-width: 1200px;
     margin: 0 auto;
@@ -77,7 +77,7 @@ nav a:hover {
     background-color: #f0f5f0;
 }
 
-/* MAIN */
+
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -85,7 +85,7 @@ main {
     min-height: calc(100vh - 300px);
 }
 
-/* HERO */
+
 .hero {
     background: linear-gradient(135deg, #1e3a5f 0%, #588157 100%);
     color: white;
@@ -108,7 +108,7 @@ main {
     opacity: 0.95;
 }
 
-/* CONTENIDO GENERAL */
+
 .contenido {
     padding: 50px 0;
 }
@@ -133,15 +133,15 @@ main {
     font-style: italic;
 }
 
-/* GRILLAS */
-.about-grid, .servicios-grid, .integrantes-grid, .valores-grid, .razones-grid {
+
+.about-grid, .servicios-grid, .casosDeExito-grid, .valores-grid, .razones-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin: 40px 0;
 }
 
-/* TARJETAS SOBRE NOSOTROS */
+
 .about-item {
     background-color: white;
     padding: 30px;
@@ -168,7 +168,7 @@ main {
     margin: 0;
 }
 
-/* TARJETAS DE SERVICIOS */
+
 .servicio-card {
     background-color: white;
     padding: 30px;
@@ -197,7 +197,7 @@ main {
     font-size: 0.95rem;
 }
 
-/* SECCIÓN DE SERVICIOS DETALLADOS */
+
 .servicios-detallados {
     margin: 40px 0;
 }
@@ -244,7 +244,7 @@ main {
     font-size: 1.2rem;
 }
 
-/* BOTONES */
+
 .cta-button, .cta-button-dark, .view-all, .link-personal {
     display: inline-block;
     padding: 12px 30px;
@@ -274,7 +274,7 @@ main {
     box-shadow: 0 5px 15px rgba(30, 58, 95, 0.3);
 }
 
-/* SECCIÓN CALL TO ACTION */
+
 .call-to-action {
     background: linear-gradient(135deg, #588157 0%, #a5c93d 100%);
     color: white;
@@ -297,7 +297,7 @@ main {
     margin-bottom: 30px;
 }
 
-/* POR QUÉ ELEGIRNOS */
+
 .por-que-elegirnos {
     padding: 40px 0;
 }
@@ -327,25 +327,28 @@ main {
     margin: 0;
 }
 
-/* TARJETAS DE INTEGRANTES */
-.integrante-card {
+
+.casosDeExito-card {
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
-.integrante-card:hover {
+.casosDeExito-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-.integrante-info {
+.casosDeExito-info {
     padding: 30px;
 }
 
-.integrante-info h3 {
+.casosDeExito-info h3 {
     color: #1e3a5f;
     font-size: 1.3rem;
     margin-bottom: 8px;
@@ -372,7 +375,7 @@ main {
     margin-top: 0 !important;
 }
 
-/* VALORES */
+
 .valores {
     margin-top: 60px;
 }
@@ -398,7 +401,7 @@ main {
     font-size: 0.95rem;
 }
 
-/* CONTACTO */
+
 .contact-info {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -448,7 +451,7 @@ main {
     margin-top: 15px !important;
 }
 
-/* FOOTER */
+
 footer {
     background: linear-gradient(135deg, #1e3a5f 0%, #0d1f3a 100%);
     color: white;
@@ -478,7 +481,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
@@ -523,7 +526,13 @@ footer a:hover {
         font-size: 1.5rem;
     }
 
-    .about-grid, .servicios-grid, .integrantes-grid, .valores-grid, .razones-grid {
+    .caso-img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    display: block;
+    }
+    .about-grid, .servicios-grid, .casosDeExito-grid, .valores-grid, .razones-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
