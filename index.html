@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TransitWeb Solutions - Inicio</title>
+    <title>TransitWeb Solutions | Consultora digital</title>
     <link rel="stylesheet" href="diseño.css">
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <h1>TransitWeb Solutions</h1>
-            <p class="tagline">Soluciones digitales innovadoras para tu empresa</p>
+    <header class="site-header">
+        <div class="brand">
+            <a href="index.html" class="logo">TransitWeb <span>Solutions</span></a>
+            <p>Diseño web y estrategia digital</p>
         </div>
-        <nav>
+        <nav aria-label="Navegación principal">
             <ul>
                 <li><a href="index.html#inicio">Inicio</a></li>
                 <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="casosDeExito.html">Casos de Exito</a></li>
+                <li><a href="integrantes.html">Equipo</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="../../Centro-transporte-inteligente-Grupo-10-main/index.html" class="project-link">Proyecto</a></li>
             </ul>
         </nav>
     </header>
@@ -25,60 +26,129 @@
     <main>
         <section id="inicio" class="hero">
             <div class="hero-content">
-                <h2>Transformamos ideas en realidad digital</h2>
-                <p>Somos una consultora especializada en crear soluciones web que generan resultados.</p>
-                <a href="servicios.html" class="cta-button">Conoce nuestros servicios</a>
-            </div>
-        </section>
-
-        <section id="sobre-nosotros" class="contenido">
-            <h2>Sobre TransitWeb Solutions</h2>
-            <div class="about-grid">
-                <div class="about-item">
-                    <h3>Nuestra misión</h3>
-                    <p>Proporcionar soluciones web de alta calidad que potencien la presencia digital de nuestros clientes, combinando diseño innovador con funcionalidad robusta.</p>
-                </div>
-                <div class="about-item">
-                    <h3>Experiencia comprobada</h3>
-                    <p>Con un equipo multidisciplinario de desarrolladores y diseñadores, ofrecemos soluciones personalizadas adaptadas a las necesidades específicas de cada cliente.</p>
-                </div>
-                <div class="about-item">
-                    <h3>Compromiso con la calidad</h3>
-                    <p>Entregamos sitios web responsive, optimizados y diseñados pensando en la experiencia del usuario como prioridad fundamental.</p>
+                <p class="eyebrow">Consultora web para marcas en crecimiento</p>
+                <h1>Convertimos ideas en sitios claros, modernos y preparados para vender.</h1>
+                <p>Planificamos, diseñamos y desarrollamos experiencias digitales responsive para emprendimientos, profesionales y empresas que necesitan verse mejor en internet.</p>
+                <div class="hero-actions">
+                    <a href="integrantes.html" class="button primary">Ver equipo</a>
+                    <a href="GeoTransporte_Actividad2.pdf" class="button secondary doc-button" target="_blank" rel="noopener">Documentación del sitio</a>
                 </div>
             </div>
         </section>
 
-        <section class="servicios-destacados">
-            <h2>Servicios destacados</h2>
-            <div class="servicios-grid">
-                <div class="servicio-card">
-                    <h3>Diseño Web Responsive</h3>
-                    <p>Sitios que se adaptan perfectamente a cualquier dispositivo, garantizando una experiencia óptima en desktop, tablet y móvil.</p>
-                </div>
-                <div class="servicio-card">
-                    <h3>Páginas Institucionales</h3>
-                    <p>Presencia profesional para tu empresa. Sitios que comunican tus valores y servicios de manera clara y atractiva.</p>
-                </div>
-                <div class="servicio-card">
+        <section class="metrics" aria-label="Indicadores de la consultora">
+            <article>
+                <strong>100%</strong>
+                <span>Sitios responsive</span>
+            </article>
+            <article>
+                <strong>4</strong>
+                <span>Perfiles especializados</span>
+            </article>
+            <article>
+                <strong>5</strong>
+                <span>Etapas de trabajo</span>
+            </article>
+            <article>
+                <strong>24 h</strong>
+                <span>Respuesta inicial</span>
+            </article>
+        </section>
+
+        <section class="section">
+            <div class="section-heading">
+                <p class="eyebrow">Entrega final</p>
+                <h2>Accesos principales del proyecto integrador</h2>
+            </div>
+            <div class="card-grid delivery-grid">
+                <article class="card">
+                    <span class="card-number">01</span>
+                    <h3>Centro de Transporte</h3>
+                    <p>Portal GeoTransporte con consulta de viajes, servicios, mapa y medios integrados.</p>
+                    <a href="../../Centro-transporte-inteligente-Grupo-10-main/index.html" class="text-link project-link">Abrir centro</a>
+                </article>
+                <article class="card">
+                    <span class="card-number">02</span>
+                    <h3>Documentación del sitio</h3>
+                    <p>Documento PDF con la información de diseño y desarrollo del proyecto.</p>
+                    <a href="GeoTransporte_Actividad2.pdf" class="text-link" target="_blank" rel="noopener">Ver documentación</a>
+                </article>
+                <article class="card">
+                    <span class="card-number">03</span>
+                    <h3>Portafolios del equipo</h3>
+                    <ul class="portfolio-list">
+                        <li><a href="https://naughtongit.github.io/Proyecto-Web/" target="_blank" rel="noopener">Thomas Naughton</a></li>
+                        <li><a href="https://rofigueroa-uade.github.io/WebDesignUADE/" target="_blank" rel="noopener">Rodrigo Figueroa</a></li>
+                        <li><a href="https://joserivero17.github.io/Proyecto-web/#sobre-mi" target="_blank" rel="noopener">José Leandro Rivero</a></li>
+                        <li><a href="https://luisuade.github.io/Pagina-Personal/" target="_blank" rel="noopener">Luis Lin</a></li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="sobre-nosotros" class="section split">
+            <div>
+                <p class="eyebrow">Sobre nosotros</p>
+                <h2>Una consultora joven con mirada estratégica</h2>
+            </div>
+            <div class="section-copy">
+                <p>TransitWeb Solutions combina diseño, desarrollo frontend, experiencia de usuario y comunicación digital. Nuestro objetivo no es solo construir páginas lindas: buscamos que cada sección ayude al visitante a entender, confiar y contactarse.</p>
+                <p>Trabajamos con procesos simples, entregables claros y decisiones justificadas para que cada cliente sepa qué se está haciendo y por qué.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-heading">
+                <p class="eyebrow">Lo que hacemos</p>
+                <h2>Servicios destacados</h2>
+            </div>
+            <div class="card-grid">
+                <article class="card">
+                    <span class="card-number">01</span>
+                    <h3>Diseño web responsive</h3>
+                    <p>Sitios adaptados a celular, tablet y escritorio, con una estructura visual ordenada y fácil de recorrer.</p>
+                </article>
+                <article class="card">
+                    <span class="card-number">02</span>
+                    <h3>Páginas institucionales</h3>
+                    <p>Presencia profesional para presentar servicios, equipo, valores, ubicación y canales de contacto.</p>
+                </article>
+                <article class="card">
+                    <span class="card-number">03</span>
                     <h3>Optimización UX/UI</h3>
-                    <p>Mejoramos la experiencia del usuario para aumentar conversiones y satisfacción de tus visitantes.</p>
-                </div>
+                    <p>Mejoras de navegación, jerarquía de contenido, llamadas a la acción y experiencia general del usuario.</p>
+                </article>
             </div>
-            <a href="servicios.html" class="view-all">Ver todos los servicios →</a>
+            <a href="servicios.html" class="text-link">Conocer todos los servicios</a>
         </section>
 
-        <section class="call-to-action">
-            <h2>¿Listo para transformar tu presencia digital?</h2>
-            <p>Contáctanos hoy y descubre cómo podemos ayudarte</p>
-            <a href="contacto.html" class="cta-button-dark">Contactanos</a>
+        <section class="section process">
+            <div class="section-heading">
+                <p class="eyebrow">Metodología</p>
+                <h2>Cómo trabajamos cada proyecto</h2>
+            </div>
+            <ol class="steps">
+                <li><strong>Diagnóstico</strong><span>Relevamos objetivos, público y contenido disponible.</span></li>
+                <li><strong>Arquitectura</strong><span>Definimos secciones, navegación y mensajes principales.</span></li>
+                <li><strong>Diseño</strong><span>Armamos una interfaz clara, responsive y coherente con la marca.</span></li>
+                <li><strong>Desarrollo</strong><span>Construimos el sitio con HTML, CSS y buenas prácticas.</span></li>
+                <li><strong>Entrega</strong><span>Revisamos ajustes finales y dejamos recomendaciones de mejora.</span></li>
+            </ol>
+        </section>
+
+        <section class="cta-panel">
+            <div>
+                <p class="eyebrow">Próximo paso</p>
+                <h2>Tu sitio puede comunicar mejor desde hoy.</h2>
+                <p>Contanos qué necesitás y te respondemos con una propuesta clara para empezar.</p>
+            </div>
+            <a href="contacto.html" class="button primary">Contactar ahora</a>
         </section>
     </main>
 
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2026 TransitWeb Solutions - Diseño Web Responsive | Desarrollado con pasión</p>
-        </div>
+        <p>&copy; 2026 TransitWeb Solutions. Diseño web responsive y soluciones digitales.</p>
     </footer>
+    <script src="transitweb.js"></script>
 </body>
 </html>

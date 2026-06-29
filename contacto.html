@@ -3,103 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TransitWeb Solutions - Contacto</title>
+    <title>Contacto | TransitWeb Solutions</title>
     <link rel="stylesheet" href="diseño.css">
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <h1>TransitWeb Solutions</h1>
-            <p class="tagline">Soluciones digitales innovadoras para tu empresa</p>
+    <header class="site-header">
+        <div class="brand">
+            <a href="index.html" class="logo">TransitWeb <span>Solutions</span></a>
+            <p>Diseño web y estrategia digital</p>
         </div>
-        <nav>
+        <nav aria-label="Navegación principal">
             <ul>
                 <li><a href="index.html#inicio">Inicio</a></li>
                 <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="casosDeExito.html">Casos de Exito</a></li>
+                <li><a href="integrantes.html">Equipo</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="../../Centro-transporte-inteligente-Grupo-10-main/index.html" class="project-link">Proyecto</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="contenido">
-            <h2>Ponte en contacto con nosotros</h2>
-            <p class="intro-text">¿Tienes un proyecto en mente? Te encantaría conocer más sobre nuestros servicios? ¡Contáctanos! Estamos listos para ayudarte.</p>
-            
-            <div class="contact-info">
-                <div class="info-item">
-                    <h3>Email</h3>
-                    <p><a href="mailto:contacto@transitweb.com">contacto@transitweb.com</a></p>
+        <section class="page-hero">
+            <p class="eyebrow">Contacto</p>
+            <h1>Hablemos de tu próximo sitio web</h1>
+            <p>Completá el formulario o escribinos por los canales de contacto. Te responderemos con una orientación inicial para avanzar.</p>
+        </section>
+
+        <section class="contact-layout">
+            <form class="contact-form" action="#" method="post">
+                <label for="nombre">Nombre y apellido</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej: Ana Pérez" required>
+
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="Ej: ana@email.com" required>
+
+                <label for="servicio">Servicio de interés</label>
+                <select id="servicio" name="servicio" required>
+                    <option value="">Seleccionar una opción</option>
+                    <option>Diseño web responsive</option>
+                    <option>Página institucional</option>
+                    <option>Optimización UX/UI</option>
+                    <option>Mantenimiento web</option>
+                    <option>Consultoría digital</option>
+                </select>
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="6" placeholder="Contanos brevemente qué necesitás"></textarea>
+
+                <button type="submit" class="button primary">Enviar consulta</button>
+            </form>
+
+            <aside class="contact-card">
+                <h2>Datos de contacto</h2>
+                <div class="info-row">
+                    <span>Email</span>
+                    <a href="mailto:contacto@transitweb.com">contacto@transitweb.com</a>
                 </div>
-                <div class="info-item">
-                    <h3>Teléfono</h3>
-                    <p><a href="tel:+541112345678">+54 11 1234-5678</a></p>
+                <div class="info-row">
+                    <span>Teléfono</span>
+                    <a href="tel:+541112345678">+54 11 1234-5678</a>
                 </div>
-                <div class="info-item">
-                    <h3>Ubicación</h3>
+                <div class="info-row">
+                    <span>Ubicación</span>
                     <p>Buenos Aires, Argentina</p>
                 </div>
-            </div>
-        </section> 
-        <section class="contenido">
-            <h2>Conoce nuestro equipo</h2>
-            <p class="intro-text">Un equipo multidisciplinario apasionado por crear soluciones digitales innovadoras. Cada miembro aporta experiencia única en diseño y desarrollo web.</p>
-            
-            <div class="casosDeExito-grid">
-                <div class="casosDeExito-card">
-                    <div class="casosDeExito-info">
-                        <h3>Thomas Naughton</h3>
-                        <p class="rol">Desarrollador Web</p>
-                        <p class="descripcion">Especialista en desarrollo frontend con experiencia en proyectos responsivos y optimización de performance.</p>
-                        <a href="https://naughtongit.github.io/Proyecto-Web/" target="_blank" class="link-personal">Ver portafolio →</a>
-                    </div>
+                <div class="info-row">
+                    <span>Atención</span>
+                    <p>Lunes a viernes de 9:00 a 18:00</p>
                 </div>
-
-                <div class="casosDeExito-card">
-                    <div class="casosDeExito-info">
-                        <h3>Rodrigo Figueroa</h3>
-                        <p class="rol">Diseñador UX/UI</p>
-                        <p class="descripcion">Experto en experiencia de usuario y diseño de interfaces modernas, siempre buscando la mejor solución visual.</p>
-                        <a href="https://rofigueroa-uade.github.io/WebDesignUADE/" target="_blank" class="link-personal">Ver portafolio →</a>
-                    </div>
-                </div>
-
-                <div class="casosDeExito-card">
-                    <div class="casosDeExito-info">
-                        <h3>José Leandro Rivero</h3>
-                        <p class="rol">Desarrollador Full Stack</p>
-                        <p class="descripcion">Profesional versátil con experiencia en desarrollo web completo, desde backend hasta frontend responsive.</p>
-                        <a href="https://joserivero17.github.io/Proyecto-web/#sobre-mi" target="_blank" class="link-personal">Ver portafolio →</a>
-                    </div>
-                </div>
-
-                <div class="casosDeExito-card">
-                    <div class="casosDeExito-info">
-                        <h3>Luis Lin</h3>
-                        <p class="rol">Especialista SEO</p>
-                        <p class="descripcion">Optimización de buscadores y estrategia digital. Aseguran que tus proyectos sean visibles en internet.</p>
-                        <a href="https://luisuade.github.io/Pagina-Personal/" target="_blank" class="link-personal">Ver portafolio →</a>
-                    </div>
-                </div>
-            </div>
+                <p class="note">Este formulario es visual para la entrega. Para hacerlo funcional se puede conectar luego con un servicio de envío o backend.</p>
+            </aside>
         </section>
-        <section>
-            <h3 class="mt-40">Horarios de atención</h3>
-            <p>Lunes a viernes: 9:00 AM - 18:00 PM</p>
-            <p>Sábado: 10:00 AM - 14:00 PM</p>
-            <p class="note">Responderemos tus consultas en el menor tiempo posible.</p>
-
-            <p class="mt-40"><strong>¿Necesitas ver el trabajo de nuestro equipo?</strong></p>
-            <p><a href="casosDeExito.html">Visita la página de Casos de Exito →</a></p>
-        </section>
-        
     </main>
 
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2026 TransitWeb Solutions - Diseño Web Responsive | Desarrollado con pasión</p>
-        </div>
+        <p>&copy; 2026 TransitWeb Solutions. Diseño web responsive y soluciones digitales.</p>
     </footer>
+    <script src="transitweb.js"></script>
 </body>
 </html>
