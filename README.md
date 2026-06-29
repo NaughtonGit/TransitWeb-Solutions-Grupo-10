@@ -17,7 +17,7 @@ Sitio web institucional para una consultora digital especializada en diseno web 
 
 - Sitio principal: abrir `index.html`.
 - Documentacion: abrir `GeoTransporte_Actividad2.pdf` desde los botones de `index.html`.
-- Proyecto Centro de Transporte: usar el boton `Proyecto` del menu o el acceso de la seccion de entrega final.
+- Proyecto Centro de Transporte: subir la carpeta `Centro-transporte-inteligente-Grupo-10-main` junto a los archivos sueltos de TransitWeb y usar el boton `Proyecto` del menu o el acceso de la seccion de entrega final.
 
 ## Objetivo del sitio
 
