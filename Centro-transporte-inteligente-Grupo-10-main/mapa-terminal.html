@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de terminal | GeoTransporte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="contenedor-header">
+            <div class="logo">
+                <span class="logo-icono">🚉</span>
+                <div>
+                    <h1 class="logo-nombre">GeoTransporte</h1>
+                    <p class="logo-subtitulo">Centro de Transporte Inteligente</p>
+                </div>
+            </div>
+            <nav aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="consulta-viajes.html">Consulta</a></li>
+                    <li><a href="servicios-terminal.html">Terminal</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="seccion seccion-oscura">
+            <div class="contenedor">
+                <h2 class="titulo-claro">Mapa del centro de transporte</h2>
+                <p class="subtitulo claro">Plano visual simplificado con plataformas, accesos, baños, información, espera, gastronomía y estacionamiento.</p>
+
+                <div class="plano-terminal" aria-label="Plano visual de la terminal GeoTransporte">
+                    <div class="plano-zona acceso-norte">Acceso Norte</div>
+                    <div class="plano-zona info">Información</div>
+                    <div class="plano-zona espera">Área de espera</div>
+                    <div class="plano-zona plataforma p1">Plataforma 1<br>Línea Roca</div>
+                    <div class="plano-zona plataforma p2">Plataforma 2<br>Línea 79</div>
+                    <div class="plano-zona plataforma p3">Plataforma 3<br>Shuttle UADE</div>
+                    <div class="plano-zona plataforma p4">Plataforma 4<br>Circuito Sur</div>
+                    <div class="plano-zona banos">Baños</div>
+                    <div class="plano-zona comida">Gastronomía</div>
+                    <div class="plano-zona estacionamiento">Estacionamiento</div>
+                    <div class="plano-zona acceso-sur">Acceso Sur</div>
+                </div>
+
+                <div class="leyenda-terminal">
+                    <span><i class="leyenda-plataforma"></i> Plataformas</span>
+                    <span><i class="leyenda-servicio"></i> Servicios</span>
+                    <span><i class="leyenda-acceso"></i> Accesos</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p class="footer-copy">© 2026 GeoTransporte · Grupo 10 · UADE</p>
+    </footer>
+</body>
+</html>

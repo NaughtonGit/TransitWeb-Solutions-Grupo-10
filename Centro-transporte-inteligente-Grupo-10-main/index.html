@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoTransporte — Centro de Transporte Inteligente</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <div class="contenedor-header">
+            <div class="logo">
+                <span class="logo-icono">🚉</span>
+                <div>
+                    <h1 class="logo-nombre">GeoTransporte</h1>
+                    <p class="logo-subtitulo">Centro de Transporte Inteligente</p>
+                </div>
+            </div>
+            <nav aria-label="Navegación principal">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Medios</a></li>
+                    <li><a href="#mapa-terminal">Mapa</a></li>
+                    <li><a href="#consulta">Consulta</a></li>
+                    <li><a href="#terminal">Servicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+        <div class="contenedor">
+            <p class="hero-tag">Proyecto grupal · UADE 2026 · Grupo 10</p>
+            <h2>Centro de Transporte Inteligente</h2>
+            <p class="hero-desc">
+                Consultá recorridos, servicios de terminal y medios de transporte integrados desde un solo lugar.
+            </p>
+            <div class="hero-acciones">
+                <a href="#consulta" class="btn-hero">Consultar viaje</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS / PÁGINAS INDIVIDUALES -->
+    <section id="servicios" class="seccion">
+        <div class="contenedor">
+            <h2>Medios integrados</h2>
+            <p class="subtitulo">Cada servicio tiene su propia página con horarios, paradas, mapa y accesibilidad.</p>
+
+            <div class="grilla-servicios">
+
+                <!-- Línea Roca — José -->
+                <article class="tarjeta-servicio">
+                    <div class="tarjeta-icono tren">🚆</div>
+                    <div class="tarjeta-cuerpo">
+                        <span class="tarjeta-tipo">Tren regional</span>
+                        <h3>Línea Roca</h3>
+                        <p>Servicio ferroviario que une Constitución con La Plata y el sur del conurbano bonaerense.</p>
+                        <ul class="tarjeta-datos">
+                            <li>Recorrido: Constitución → La Plata</li>
+                            <li>Ramales: La Plata, Bosques, Ezeiza</li>
+                            <li>Operadora: Trenes Argentinos</li>
+                        </ul>
+                        <a href="linea-roca.html" class="btn-tarjeta">Ver página</a>
+                    </div>
+                </article>
+
+                <!-- Colectivo urbano — Thomas -->
+                <article class="tarjeta-servicio">
+                    <div class="tarjeta-icono colectivo">🚌</div>
+                    <div class="tarjeta-cuerpo">
+                        <span class="tarjeta-tipo">Colectivo urbano</span>
+                        <h3>Línea 79</h3>
+                        <p>Servicio de colectivo urbano que sale desde la Terminal GeoTransporte hacia el centro porteño.</p>
+                        <ul class="tarjeta-datos">
+                            <li>Recorrido: Terminal GeoTransporte → Plaza de Mayo</li>
+                            <li>Paradas: 24 en total</li>
+                            <li>Operadora: Transportes Metropolitanos</li>
+                        </ul>
+                        <a href="linea79_naranja/linea79.html" class="btn-tarjeta">Ver página</a>
+                    </div>
+                </article>
+
+                <!-- Transporte universitario — Rodrigo -->
+                <article class="tarjeta-servicio">
+                    <div class="tarjeta-icono universitario">🎓</div>
+                    <div class="tarjeta-cuerpo">
+                        <span class="tarjeta-tipo">Transporte universitario</span>
+                        <h3>Shuttle UADE – Roca</h3>
+                        <p>Servicio de shuttle directo para estudiantes entre la Terminal GeoTransporte y el campus UADE.</p>
+                        <ul class="tarjeta-datos">
+                            <li>Recorrido: Terminal GeoTransporte → UADE</li>
+                            <li>Frecuencia: días hábiles</li>
+                            <li>Público: estudiantes y docentes</li>
+                        </ul>
+                        <a href="uade_shuttle/shuttle-uade.html" class="btn-tarjeta">Ver página</a>
+                    </div>
+                </article>
+
+                <!-- Transporte turístico — Luis -->
+                <article class="tarjeta-servicio">
+                    <div class="tarjeta-icono turistico">🏛️</div>
+                    <div class="tarjeta-cuerpo">
+                        <span class="tarjeta-tipo">Transporte turístico</span>
+                        <h3>Circuito Sur</h3>
+                        <p>Servicio turístico que recorre los principales atractivos del sur del GBA y la ciudad de La Plata.</p>
+                        <ul class="tarjeta-datos">
+                            <li>Recorrido: Terminal GeoTransporte → Circuito Sur</li>
+                            <li>Paradas: museos, parques y reservas</li>
+                            <li>Frecuencia: fines de semana</li>
+                        </ul>
+                        <a href="transporte-turistico.html" class="btn-tarjeta">Ver página</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MAPA DE LA TERMINAL -->
+    <section id="mapa-terminal" class="seccion seccion-mapa-terminal">
+        <div class="contenedor">
+            <div class="mapa-terminal-encabezado">
+                <div>
+                    <h2>Mapa de la terminal</h2>
+                    <p class="subtitulo">Ubicá accesos, plataformas, servicios y áreas de espera dentro del Centro de Transporte Inteligente.</p>
+                </div>
+            </div>
+            <figure class="mapa-terminal-imagen">
+                <img src="Mapa.png" alt="Mapa de la terminal GeoTransporte con accesos, plataformas y servicios">
+            </figure>
+        </div>
+    </section>
+
+    <!-- CONSULTA DE VIAJES -->
+    <section id="consulta" class="seccion seccion-gris">
+        <div class="contenedor">
+            <h2>Consulta de viajes</h2>
+            <p class="subtitulo">Elegí un destino y GeoTransporte te indica el medio recomendado, sector de salida, tiempo y costo estimado.</p>
+
+            <div class="consulta-panel">
+                <form class="consulta-form" id="form-consulta">
+                    <label for="destino">Destino</label>
+                    <select id="destino" name="destino" required>
+                        <option value="">Seleccioná un destino</option>
+                        <option value="la-plata">La Plata</option>
+                        <option value="plaza-mayo">Plaza de Mayo</option>
+                        <option value="uade">Campus UADE</option>
+                        <option value="circuito-sur">Circuito Sur turístico</option>
+                    </select>
+                    <button type="submit" class="btn-hero">Buscar viaje</button>
+                </form>
+
+                <article class="resultado-viaje" id="resultado-viaje" aria-live="polite">
+                    <p class="resultado-placeholder">La recomendación aparecerá acá cuando realices una consulta.</p>
+                </article>
+            </div>
+
+            <section class="mapa-recorrido" id="mapa-recorrido" aria-live="polite">
+                <div class="mapa-recorrido-header">
+                    <div>
+                        <span class="resultado-label">Mapa del recorrido</span>
+                        <h3>Seleccioná un destino para visualizar la ruta</h3>
+                    </div>
+                </div>
+                <div class="recorrido-visual">
+                    <iframe
+                        class="consulta-mapa-real"
+                        title="Mapa real del recorrido consultado"
+                        src="about:blank"
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <ol class="recorrido-paradas" id="recorrido-paradas">
+                    <li>La ruta aparecerá después de buscar un viaje.</li>
+                </ol>
+            </section>
+        </div>
+    </section>
+
+    <!-- SERVICIOS DE TERMINAL -->
+    <section id="terminal" class="seccion">
+        <div class="contenedor">
+            <h2>Servicios de la terminal</h2>
+            <p class="subtitulo">Información útil para moverse dentro del Centro de Transporte Inteligente.</p>
+
+            <div class="grilla-terminal">
+                <article class="terminal-card">
+                    <span>🚻</span>
+                    <h3>Baños</h3>
+                    <p>Sector B, junto al acceso principal. Abiertos todos los días de 6:00 a 23:00.</p>
+                </article>
+                <article class="terminal-card">
+                    <span>ℹ️</span>
+                    <h3>Oficina de información</h3>
+                    <p>Hall central. Atención presencial de 7:00 a 21:00 con orientación de recorridos.</p>
+                </article>
+                <article class="terminal-card">
+                    <span>☕</span>
+                    <h3>Locales gastronómicos</h3>
+                    <p>Patio de comidas en Sector C. Cafetería, kiosco y opciones rápidas.</p>
+                </article>
+                <article class="terminal-card">
+                    <span>🪑</span>
+                    <h3>Áreas de espera</h3>
+                    <p>Salas climatizadas frente a plataformas 1 a 4, con pantallas informativas.</p>
+                </article>
+                <article class="terminal-card">
+                    <span>🅿️</span>
+                    <h3>Estacionamiento</h3>
+                    <p>Ingreso por Acceso Sur. Disponible las 24 horas con sectores para bicicletas.</p>
+                </article>
+                <article class="terminal-card">
+                    <span>💬</span>
+                    <h3>Preguntas frecuentes</h3>
+                    <p>Asistente informativo para dudas sobre horarios, accesibilidad, SUBE y conexiones.</p>
+                </article>
+            </div>
+
+            <details class="faq-terminal">
+                <summary>Preguntas frecuentes del centro</summary>
+                <div class="faq-contenido">
+                    <p><strong>¿Dónde cargo la SUBE?</strong> En el kiosco del Sector C y en las terminales automáticas del hall central.</p>
+                    <p><strong>¿Hay asistencia para personas con movilidad reducida?</strong> Sí, se solicita en la oficina de información o en plataformas.</p>
+                    <p><strong>¿Dónde veo cambios de salida?</strong> En las pantallas del hall y en cada plataforma señalizada.</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="contenedor contenedor-footer">
+            <div class="footer-bloque">
+                <p class="footer-logo">GeoTransporte</p>
+                <p>Centro de Transporte Inteligente</p>
+            </div>
+            <div class="footer-bloque">
+                <p class="footer-titulo">Páginas del proyecto</p>
+                <ul>
+                    <li><a href="#consulta">Consulta de viajes</a></li>
+                    <li><a href="#terminal">Servicios de terminal</a></li>
+                    <li><a href="linea-roca.html">Línea Roca</a></li>
+                    <li><a href="linea79_naranja/linea79.html">Colectivo Urbano</a></li>
+                    <li><a href="uade_shuttle/shuttle-uade.html">Transporte Universitario</a></li>
+                    <li><a href="transporte-turistico.html">Transporte Turístico</a></li>
+                </ul>
+            </div>
+            <div class="footer-bloque">
+                <p class="footer-titulo">Proyecto académico</p>
+                <p>Diseño y Desarrollo Web</p>
+                <p>UADE · 2026 · Grupo 10</p>
+                <p style="margin-top: 0.75rem;">
+                    <a href="https://www.figma.com/design/9lpdKKjLLsfMPxaqhNQzon" target="_blank" rel="noopener noreferrer" style="color: var(--color-acento); font-weight: 600;">
+                        🎨 Carpeta de diseño en Figma →
+                    </a>
+                </p>
+            </div>
+        </div>
+        <p class="footer-copy">© 2026 GeoTransporte · Grupo 10 · UADE</p>
+    </footer>
+
+    <aside class="chatbot" aria-label="Asistente virtual de GeoTransporte">
+        <button class="chatbot-toggle" type="button" id="chatbot-toggle" aria-expanded="false" aria-controls="chatbot-panel">
+            💬
+        </button>
+        <div class="chatbot-panel" id="chatbot-panel" hidden>
+            <div class="chatbot-header">
+                <div>
+                    <p class="chatbot-label">Asistente virtual</p>
+                    <h2>GeoBot</h2>
+                </div>
+                <button class="chatbot-close" type="button" id="chatbot-close" aria-label="Cerrar chat">×</button>
+            </div>
+            <div class="chatbot-messages" id="chatbot-messages" aria-live="polite">
+                <div class="mensaje bot">Hola, soy GeoBot. Puedo ayudarte con viajes, servicios, SUBE, accesibilidad y medios de transporte.</div>
+            </div>
+            <div class="chatbot-sugerencias" aria-label="Preguntas sugeridas">
+                <button type="button" data-question="¿Cómo consulto un viaje?">Consulta de viaje</button>
+                <button type="button" data-question="¿Qué servicios tiene la terminal?">Servicios</button>
+                <button type="button" data-question="¿Dónde cargo la SUBE?">SUBE</button>
+            </div>
+            <form class="chatbot-form" id="chatbot-form">
+                <label for="chatbot-input" class="sr-only">Escribí tu pregunta</label>
+                <input type="text" id="chatbot-input" placeholder="Escribí tu pregunta..." autocomplete="off">
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </aside>
+
+    <script>
+        const viajes = {
+            "la-plata": {
+                destino: "La Plata",
+                transporte: "Línea Roca",
+                salida: "Estación Plaza Constitución",
+                tiempo: "58 minutos",
+                costo: "$420 aprox.",
+                detalle: "Recomendado para viajes regionales hacia el sur del AMBA.",
+                paradas: ["Plaza Constitución", "Quilmes", "Berazategui", "La Plata"],
+                tipo: "tren",
+                mapa: "https://www.google.com/maps?output=embed&saddr=Plaza+Constitucion,+Buenos+Aires&daddr=La+Plata,+Buenos+Aires"
+            },
+            "plaza-mayo": {
+                destino: "Plaza de Mayo",
+                transporte: "Línea 79",
+                salida: "Terminal GeoTransporte (Lomas de Zamora) - Plataforma 2",
+                tiempo: "42 minutos",
+                costo: "$320 aprox.",
+                detalle: "Opción directa desde la terminal hacia el centro porteño.",
+                paradas: ["Terminal GeoTransporte (Lomas de Zamora)", "Lomas de Zamora Centro", "Puente Alsina", "Plaza de Mayo"],
+                tipo: "colectivo",
+                mapa: "https://www.google.com/maps?output=embed&saddr=Lomas+de+Zamora,+Buenos+Aires&daddr=Plaza+de+Mayo,+Buenos+Aires"
+            },
+            "uade": {
+                destino: "Campus UADE",
+                transporte: "Shuttle UADE - Roca",
+                salida: "Terminal GeoTransporte (Lomas de Zamora) - Plataforma 3",
+                tiempo: "18 minutos",
+                costo: "Sin costo adicional",
+                detalle: "Servicio orientado a estudiantes y docentes en días hábiles.",
+                paradas: ["Terminal GeoTransporte (Lomas de Zamora)", "Constitución", "Lima", "Campus UADE"],
+                tipo: "universitario",
+                mapa: "https://www.google.com/maps?output=embed&saddr=Lomas+de+Zamora,+Buenos+Aires&daddr=UADE,+Lima+775,+Buenos+Aires"
+            },
+            "circuito-sur": {
+                destino: "Circuito Sur turístico",
+                transporte: "Transporte turístico Circuito Sur",
+                salida: "Terminal GeoTransporte (Lomas de Zamora) - Sector 4",
+                tiempo: "90 minutos",
+                costo: "$1800 aprox.",
+                detalle: "Recorrido de fin de semana por puntos turísticos del sur.",
+                paradas: ["Terminal GeoTransporte (Lomas de Zamora)", "Reserva Natural", "Museo Regional", "Circuito Sur"],
+                tipo: "turistico",
+                mapa: "https://www.google.com/maps?output=embed&saddr=Lomas+de+Zamora,+Buenos+Aires&daddr=La+Plata,+Buenos+Aires"
+            }
+        };
+
+        const formConsulta = document.getElementById("form-consulta");
+        const resultadoViaje = document.getElementById("resultado-viaje");
+        const mapaRecorrido = document.getElementById("mapa-recorrido");
+        const recorridoParadas = document.getElementById("recorrido-paradas");
+        const mapaIframe = document.querySelector(".consulta-mapa-real");
+
+        formConsulta.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const seleccion = document.getElementById("destino").value;
+            const viaje = viajes[seleccion];
+
+            if (!viaje) {
+                resultadoViaje.innerHTML = '<p class="resultado-placeholder">Seleccioná un destino para ver la recomendación.</p>';
+                mapaRecorrido.className = "mapa-recorrido";
+                mapaRecorrido.querySelector("h3").textContent = "Seleccioná un destino para visualizar la ruta";
+                mapaIframe.src = "about:blank";
+                recorridoParadas.innerHTML = "<li>La ruta aparecerá después de buscar un viaje.</li>";
+                return;
+            }
+
+            resultadoViaje.innerHTML = `
+                <span class="resultado-label">Destino recomendado</span>
+                <h3>${viaje.destino}</h3>
+                <div class="resultado-grid">
+                    <p><strong>Transporte</strong>${viaje.transporte}</p>
+                    <p><strong>Salida</strong>${viaje.salida}</p>
+                    <p><strong>Tiempo estimado</strong>${viaje.tiempo}</p>
+                    <p><strong>Costo estimado</strong>${viaje.costo}</p>
+                </div>
+                <p class="resultado-detalle">${viaje.detalle}</p>
+            `;
+
+            mapaRecorrido.className = "mapa-recorrido activo " + viaje.tipo;
+            mapaRecorrido.querySelector("h3").textContent = viaje.destino + " por " + viaje.transporte;
+            mapaIframe.src = viaje.mapa;
+            recorridoParadas.innerHTML = viaje.paradas.map(function (parada) {
+                return "<li>" + parada + "</li>";
+            }).join("");
+        });
+
+        const chatbotToggle = document.getElementById("chatbot-toggle");
+        const chatbotClose = document.getElementById("chatbot-close");
+        const chatbotPanel = document.getElementById("chatbot-panel");
+        const chatbotForm = document.getElementById("chatbot-form");
+        const chatbotInput = document.getElementById("chatbot-input");
+        const chatbotMessages = document.getElementById("chatbot-messages");
+
+        function abrirChatbot() {
+            chatbotPanel.hidden = false;
+            chatbotToggle.setAttribute("aria-expanded", "true");
+            chatbotInput.focus();
+        }
+
+        function cerrarChatbot() {
+            chatbotPanel.hidden = true;
+            chatbotToggle.setAttribute("aria-expanded", "false");
+        }
+
+        function agregarMensaje(texto, tipo) {
+            const mensaje = document.createElement("div");
+            mensaje.className = "mensaje " + tipo;
+            mensaje.textContent = texto;
+            chatbotMessages.appendChild(mensaje);
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+
+        function agregarOpcionesViaje() {
+            const opciones = document.createElement("div");
+            opciones.className = "mensaje bot opciones-chat";
+            opciones.innerHTML = `
+                <p>Elegí un destino para ver la consulta completa:</p>
+                <button type="button" data-viaje-chat="la-plata">La Plata</button>
+                <button type="button" data-viaje-chat="plaza-mayo">Plaza de Mayo</button>
+                <button type="button" data-viaje-chat="uade">Campus UADE</button>
+                <button type="button" data-viaje-chat="circuito-sur">Circuito Sur turístico</button>
+            `;
+            chatbotMessages.appendChild(opciones);
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+
+        function responderViaje(destino) {
+            const viaje = viajes[destino];
+            if (!viaje) return "No encontré ese destino. Probá con La Plata, Plaza de Mayo, Campus UADE o Circuito Sur.";
+
+            return `${viaje.destino}: te conviene usar ${viaje.transporte}. Salida: ${viaje.salida}. Tiempo estimado: ${viaje.tiempo}. Costo estimado: ${viaje.costo}.`;
+        }
+
+        function responderPregunta(pregunta) {
+            const texto = pregunta.toLowerCase();
+
+            if (texto.includes("viaje") || texto.includes("destino") || texto.includes("llegar")) {
+                return "Te muestro las opciones disponibles para consultar transporte recomendado, plataforma, tiempo y costo estimado.";
+            }
+
+            if (texto.includes("baño") || texto.includes("servicio") || texto.includes("terminal") || texto.includes("comida") || texto.includes("estacionamiento")) {
+                return "La terminal cuenta con baños, oficina de información, locales gastronómicos, áreas de espera y estacionamiento. Podés verlo en la sección Servicio.";
+            }
+
+            if (texto.includes("sube") || texto.includes("cargar")) {
+                return "Podés cargar la SUBE en el kiosco del Sector C y en terminales automáticas del hall central.";
+            }
+
+            if (texto.includes("accesibilidad") || texto.includes("reducida") || texto.includes("rampa")) {
+                return "Hay asistencia para personas con movilidad reducida. Se solicita en la oficina de información o en plataformas.";
+            }
+
+            if (texto.includes("roca") || texto.includes("tren")) {
+                return "La Línea Roca sale desde Estación Plaza Constitución y conecta con La Plata y otros ramales.";
+            }
+
+            if (texto.includes("79") || texto.includes("colectivo")) {
+                return "La Línea 79 sale desde Terminal GeoTransporte (Lomas de Zamora) - Plataforma 2 y conecta con Plaza de Mayo.";
+            }
+
+            if (texto.includes("uade") || texto.includes("shuttle")) {
+                return "El Shuttle UADE sale desde Terminal GeoTransporte (Lomas de Zamora) - Plataforma 3 y está orientado a estudiantes y docentes en días hábiles.";
+            }
+
+            if (texto.includes("turístico") || texto.includes("turistico") || texto.includes("circuito")) {
+                return "El Circuito Sur turístico sale desde Terminal GeoTransporte (Lomas de Zamora) - Sector 4 y funciona como recorrido de fin de semana.";
+            }
+
+            if (texto.includes("mapa") || texto.includes("plano")) {
+                return "Cuando consultás un viaje, aparece un mapa real con el punto de salida y el destino marcado para visualizar el recorrido.";
+            }
+
+            return "Puedo ayudarte con consulta de viajes, servicios de terminal, SUBE, accesibilidad, Línea Roca, Línea 79, Shuttle UADE y Circuito Sur.";
+        }
+
+        chatbotToggle.addEventListener("click", abrirChatbot);
+        chatbotClose.addEventListener("click", cerrarChatbot);
+
+        chatbotForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const pregunta = chatbotInput.value.trim();
+            if (!pregunta) return;
+
+            agregarMensaje(pregunta, "usuario");
+            chatbotInput.value = "";
+
+            setTimeout(function () {
+                agregarMensaje(responderPregunta(pregunta), "bot");
+                if (pregunta.toLowerCase().includes("viaje") || pregunta.toLowerCase().includes("destino") || pregunta.toLowerCase().includes("llegar")) {
+                    agregarOpcionesViaje();
+                }
+            }, 250);
+        });
+
+        document.querySelectorAll("[data-question]").forEach(function (boton) {
+            boton.addEventListener("click", function () {
+                const pregunta = boton.dataset.question;
+                agregarMensaje(pregunta, "usuario");
+                setTimeout(function () {
+                    agregarMensaje(responderPregunta(pregunta), "bot");
+                    if (pregunta.toLowerCase().includes("viaje") || pregunta.toLowerCase().includes("destino") || pregunta.toLowerCase().includes("llegar")) {
+                        agregarOpcionesViaje();
+                    }
+                }, 250);
+            });
+        });
+
+        chatbotMessages.addEventListener("click", function (event) {
+            const botonViaje = event.target.closest("[data-viaje-chat]");
+            if (!botonViaje) return;
+
+            const destino = botonViaje.dataset.viajeChat;
+            agregarMensaje(botonViaje.textContent, "usuario");
+            setTimeout(function () {
+                agregarMensaje(responderViaje(destino), "bot");
+            }, 250);
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+

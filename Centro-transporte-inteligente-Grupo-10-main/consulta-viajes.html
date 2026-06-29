@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de viajes | GeoTransporte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="contenedor-header">
+            <div class="logo">
+                <span class="logo-icono">🚉</span>
+                <div>
+                    <h1 class="logo-nombre">GeoTransporte</h1>
+                    <p class="logo-subtitulo">Centro de Transporte Inteligente</p>
+                </div>
+            </div>
+            <nav aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="consulta-viajes.html">Consulta</a></li>
+                    <li><a href="servicios-terminal.html">Terminal</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="contenedor">
+                <p class="hero-tag">Planificador con datos simulados</p>
+                <h2>Consulta cómo llegar a tu destino.</h2>
+                <p class="hero-desc">Seleccioná una opción y el sistema informa transporte recomendado, salida, tiempo estimado y costo.</p>
+            </div>
+        </section>
+
+        <section class="seccion seccion-gris">
+            <div class="contenedor">
+                <h2>Consulta de viajes</h2>
+                <p class="subtitulo">Funcionalidad obligatoria implementada con JavaScript y datos simulados.</p>
+
+                <div class="consulta-panel">
+                    <form class="consulta-form" id="form-consulta">
+                        <label for="destino">Destino</label>
+                        <select id="destino" name="destino" required>
+                            <option value="">Seleccioná un destino</option>
+                            <option value="la-plata">La Plata</option>
+                            <option value="plaza-mayo">Plaza de Mayo</option>
+                            <option value="uade">Campus UADE</option>
+                            <option value="circuito-sur">Circuito Sur turístico</option>
+                        </select>
+                        <button type="submit" class="btn-hero">Buscar viaje</button>
+                    </form>
+
+                    <article class="resultado-viaje" id="resultado-viaje" aria-live="polite">
+                        <p class="resultado-placeholder">La recomendación aparecerá acá cuando realices una consulta.</p>
+                    </article>
+                </div>
+
+                <section class="linea-paradas" id="linea-paradas" aria-live="polite">
+                    <div class="mapa-recorrido-header">
+                        <div>
+                            <span class="resultado-label">Línea de paradas</span>
+                            <h3>Seleccioná un destino para ver el recorrido</h3>
+                        </div>
+                    </div>
+                    <div class="linea-paradas-visual">
+                        <div class="linea-paradas-trazo"></div>
+                        <div class="parada-punto inicio"><span>Origen</span></div>
+                        <div class="parada-punto uno"><span>Parada</span></div>
+                        <div class="parada-punto dos"><span>Parada</span></div>
+                        <div class="parada-punto destino"><span>Destino</span></div>
+                    </div>
+                    <ol class="recorrido-paradas" id="recorrido-paradas">
+                        <li>Las paradas aparecerán después de buscar un viaje.</li>
+                    </ol>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p class="footer-copy">© 2026 GeoTransporte · Grupo 10 · UADE</p>
+    </footer>
+
+    <script src="geobot.js"></script>
+    <script>
+        const viajes = {
+            "la-plata": {
+                datos: ["La Plata", "Línea Roca", "Estación Plaza Constitución", "58 minutos", "$420 aprox.", "Viaje regional hacia el sur del AMBA."],
+                paradas: ["Plaza Constitución", "Quilmes", "Berazategui", "La Plata"],
+                tipo: "tren"
+            },
+            "plaza-mayo": {
+                datos: ["Plaza de Mayo", "Línea 79", "Terminal GeoTransporte - Plataforma 2", "42 minutos", "$320 aprox.", "Conexión directa desde la terminal hacia el centro porteño."],
+                paradas: ["Terminal GeoTransporte", "Lanús Centro", "Puente Alsina", "Plaza de Mayo"],
+                tipo: "colectivo"
+            },
+            "uade": {
+                datos: ["Campus UADE", "Shuttle UADE - Roca", "Terminal GeoTransporte - Plataforma 3", "18 minutos", "Sin costo adicional", "Servicio para estudiantes y docentes en días hábiles."],
+                paradas: ["Terminal GeoTransporte", "Constitución", "Lima", "Campus UADE"],
+                tipo: "universitario"
+            },
+            "circuito-sur": {
+                datos: ["Circuito Sur turístico", "Transporte turístico Circuito Sur", "Terminal GeoTransporte - Sector 4", "90 minutos", "$1800 aprox.", "Recorrido de fin de semana desde la terminal por puntos turísticos."],
+                paradas: ["Terminal GeoTransporte", "Reserva Natural", "Museo Regional", "Circuito Sur"],
+                tipo: "turistico"
+            }
+        };
+
+        document.getElementById("form-consulta").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const viaje = viajes[document.getElementById("destino").value];
+            const resultado = document.getElementById("resultado-viaje");
+            const lineaParadas = document.getElementById("linea-paradas");
+            const recorridoParadas = document.getElementById("recorrido-paradas");
+
+            if (!viaje) {
+                resultado.innerHTML = '<p class="resultado-placeholder">Seleccioná un destino para ver la recomendación.</p>';
+                lineaParadas.className = "linea-paradas";
+                lineaParadas.querySelector("h3").textContent = "Seleccioná un destino para ver el recorrido";
+                recorridoParadas.innerHTML = "<li>Las paradas aparecerán después de buscar un viaje.</li>";
+                return;
+            }
+
+            const datos = viaje.datos;
+
+            resultado.innerHTML = `
+                <span class="resultado-label">Destino recomendado</span>
+                <h3>${datos[0]}</h3>
+                <div class="resultado-grid">
+                    <p><strong>Transporte</strong>${datos[1]}</p>
+                    <p><strong>Salida</strong>${datos[2]}</p>
+                    <p><strong>Tiempo estimado</strong>${datos[3]}</p>
+                    <p><strong>Costo estimado</strong>${datos[4]}</p>
+                </div>
+                <p class="resultado-detalle">${datos[5]}</p>
+            `;
+
+            lineaParadas.className = "linea-paradas activo " + viaje.tipo;
+            lineaParadas.querySelector("h3").textContent = datos[0] + " por " + datos[1];
+            lineaParadas.querySelector(".inicio span").textContent = viaje.paradas[0];
+            lineaParadas.querySelector(".uno span").textContent = viaje.paradas[1];
+            lineaParadas.querySelector(".dos span").textContent = viaje.paradas[2];
+            lineaParadas.querySelector(".destino span").textContent = viaje.paradas[3];
+            recorridoParadas.innerHTML = viaje.paradas.map(function (parada) {
+                return "<li>" + parada + "</li>";
+            }).join("");
+        });
+    </script>
+</body>
+</html>
+
