@@ -45,3 +45,24 @@ if (projectLinks.length > 0) {
         }
     });
 }
+
+const contactForm = document.querySelector("#contact-form");
+
+if (contactForm) {
+    const formStatus = document.querySelector("#form-status");
+
+    contactForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        if (!contactForm.checkValidity()) {
+            contactForm.reportValidity();
+            return;
+        }
+
+        contactForm.reset();
+
+        if (formStatus) {
+            formStatus.textContent = "Consulta enviada. Te responderemos a la brevedad.";
+        }
+    });
+}

@@ -31,7 +31,7 @@
         </section>
 
         <section class="contact-layout">
-            <form class="contact-form" action="#" method="post">
+            <form class="contact-form" id="contact-form">
                 <label for="nombre">Nombre y apellido</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Ej: Ana Pérez" required>
 
@@ -52,6 +52,7 @@
                 <textarea id="mensaje" name="mensaje" rows="6" placeholder="Contanos brevemente qué necesitás"></textarea>
 
                 <button type="submit" class="button primary">Enviar consulta</button>
+                <p class="form-status" id="form-status" aria-live="polite"></p>
             </form>
 
             <aside class="contact-card">
